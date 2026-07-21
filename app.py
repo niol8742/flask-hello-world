@@ -41,7 +41,7 @@ def creating():
 
 @app.route('/db_insert')
 def inserting():
-    conn = psycopg.connect("postgres://render_example_ocz5_user:Ij...")
+    conn = psycopg.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
     cur = conn.cursor()
 
     cur.execute('''
