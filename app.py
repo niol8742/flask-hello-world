@@ -18,3 +18,23 @@ def db_test():
     finally:
         if conn is not None:
             conn.close()
+            
+@app.route('/db_create')
+def creating():
+    conn = psycopg2.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
+    cur = conn.cursor()
+
+    cur.execute('''
+        CREATE TABLE IF NOT EXISTS Basketball (
+            First varchar(255),
+            Last varchar(255),
+            City varchar(255),
+            Name varchar(255),
+            Number int
+        );
+    ''')
+
+    conn.commit()
+    conn.close()
+
+    return "Basketball Table Successfully Created"
