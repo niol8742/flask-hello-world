@@ -11,7 +11,7 @@ def index():
 def db_test():
     conn = None
     try:
-        conn = psycopg2.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
+        conn = psycopg.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
         return "Database connection successful"
     except Exception as e:
         return f"Database connection failed: {e}"
