@@ -21,7 +21,7 @@ def db_test():
             
 @app.route('/db_create')
 def creating():
-    conn = psycopg2.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
+    conn = psycopg.connect("postgresql://niol8742db_user:vC051v0HBBHJEroQn7HFFZhU4sR6whRO@dpg-d9fp1q3bc2fs73bl98qg-a/niol8742db")
     cur = conn.cursor()
 
     cur.execute('''
